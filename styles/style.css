@@ -16,6 +16,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -48,4 +51,109 @@ ol {
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
+}
+
+.content {
+    /*width: 1140px;*/
+    /*height: 564px;*/
+    /*padding: 133px 30px;*/
+    display: grid;
+    grid-template-areas: "result details";
+    align-items: end;
+    grid-template-columns: 711px 399px;
+    gap: 30px;
+}
+
+.result {
+    grid-area: result;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.content__details {
+    display: flex;
+    flex-direction: column;
+    inline-size: 100%;
+    block-size: 100%;
+    gap: 26px;
+    grid-area: details;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.content__list-container {
+    position: relative;
+    block-size: 298px;
+    overflow: auto;
+    padding: 2px;
+    gap: 30px;
+}
+
+.result__video-container {
+    width: 711px;
+    height: 386px;
+    position: relative;
+
+}
+
+.result__video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+
+.content__list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.content__list-item {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.content__video-card {
+    display: flex;
+    flex-direction:row;
+    color: #fff;
+    background-color: transparent;
+}
+
+.content__card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.content__card-link:active {
+    background-color: #545050;
+}
+
+/* видео для видеокарточки */
+.content__video-card-thumbnail {
+    object-fit:cover;
+    object-position: center;
+    width: 194px;
+    height: 103px;
+}
+
+/* подзаголовок видеокарточки */
+.content__video-card-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: uppercase;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 196px;
 }
